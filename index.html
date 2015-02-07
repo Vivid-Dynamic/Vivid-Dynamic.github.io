@@ -1,7 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>HELLO OUT THERE GITHUB, turn down for what?</p>
+<h1>Hello there, Francis! If you are viewing this, the upload was a success.</h1>
+<p title = "You found the tooltip!">Now we can get started with some silly stuff :3</p>
+<script>
+var CANVAS_WIDTH = 400;
+var CANVAS_HEIGHT = 400;
+var xOffset = 50;
+var yOffset = 50
+var xIncrement = Math.round(Math.random()*3)+1;
+var yIncrement = Math.round(Math.random()*3)+1;
+var canvasElement = $("<canvas width='" + CANVAS_WIDTH + 
+                      "' height='" + CANVAS_HEIGHT + "'></canvas>");
+var canvas = canvasElement.get(0).getContext("2d");
+canvasElement.appendTo('body');
+var FPS = 30;
+var thatsRough = new Image();
+thatsRough.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+function update() {}
+function draw(){
+canvas.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+canvas.fillStyle = "#000"; // Set color to black
+  canvas.fillText("That's rough, buddy.", xOffset, yOffset);
+  if(xOffset > CANVAS_WIDTH-90 || xOffset < 0) {
+  	xIncrement=xIncrement*-1;
+  }
+  	xOffset+=xIncrement;
+  if(yOffset > CANVAS_HEIGHT-10 || yOffset < 0) {
+  	yIncrement=yIncrement*-1;
+  }
+  	yOffset+=yIncrement;
+}
+setInterval(function() {
+  update();
+  draw();
+}, 1000/FPS);
+</script>
 </body>
 </html>
