@@ -1,0 +1,30 @@
+
+body{
+	font-family:"Myriad Pro", Arial, Helvetica, sans-serif;
+	color:#9277AC;
+	text-align:center;
+	background-color:#502C73;
+}
+
+p{
+	padding: 10px;
+	margin: 0 auto;
+}
+h1{color:white;}
+
+div {
+    width: 600px;
+    padding: 10px;
+    background-color: #351456;
+    border: 5px #1F0439;
+    margin: 0 auto;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+
+#caption {
+	max-height: 60px;
+	padding: 0px;
+}
+
